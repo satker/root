@@ -4,7 +4,7 @@ def table(num, resf):
     # num - число элементов,  например num = "20"
     # resf - значения функции, например resf = [1, 1, 0, 0]
     i = 2 ** int(num)
-    # assert (len(resf) == i), "result function must be same length with 2^n" можно не трогать пока что)
+    assert (len(resf) == i), "result function must be same length with 2^n"
     ttable = []
     p = 1
     for r in range(int(num)):  # создаем n строк
