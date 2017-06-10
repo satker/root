@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="connection.url">jdbc:postgresql://localhost:5432/DbFD</property>
+    <property name="connection.driver_class">org.postgresql.Driver</property>
+      <mapping class="javasrc.hiber.CharactEntity"/>
+      <mapping resource="hibernate/dao/CharactEntity.hbm.xml"/>
+      <mapping resource="hibernate/dao/CharactClassEntity.hbm.xml"/>
+      <mapping class="javasrc.hiber.CharactClassEntity"/>
+      <mapping resource="hibernate/dao/CharactValueEntity.hbm.xml"/>
+      <mapping class="javasrc.hiber.CharactValueEntity"/>
+      <mapping resource="hibernate/dao/ClassifierEntity.hbm.xml"/>
+      <mapping class="javasrc.hiber.ClassifierEntity"/>
+      <mapping resource="hibernate/dao/EducOdjectEntity.hbm.xml"/>
+      <mapping class="javasrc.hiber.EducOdjectEntity"/>
+      <mapping resource="hibernate/dao/PersonEntity.hbm.xml"/>
+      <mapping class="javasrc.hiber.PersonEntity"/>
+      <mapping class="javasrc.hiber.PersonEoEntity"/>
+      <mapping resource="hibernate/dao/PersonEoEntity.hbm.xml"/>
+      <mapping class="javasrc.hiber.PositionEntity"/>
+      <mapping resource="hibernate/dao/PositionEntity.hbm.xml"/>
+      <mapping class="javasrc.hiber.PositionEoEntity"/>
+      <mapping resource="hibernate/dao/PositionEoEntity.hbm.xml"/>
+      <mapping class="javasrc.hiber.SubdivisionEntity"/>
+      <mapping resource="hibernate/dao/SubdivisionEntity.hbm.xml"/>
+      <mapping class="javasrc.hiber.TypeCharactEntity"/>
+      <mapping resource="hibernate/dao/TypeCharactEntity.hbm.xml"/>
+      <mapping class="javasrc.hiber.UsersEntity"/>
+      <mapping resource="hibernate/dao/UsersEntity.hbm.xml"/>
+      <mapping class="javasrc.hiber.ValidClassEntity"/>
+      <mapping resource="hibernate/dao/ValidClassEntity.hbm.xml"/>
+      <mapping resource="hibernate/dao/VarOfMuitiplicityEntity.hbm.xml"/>
+      <mapping class="javasrc.hiber.VarOfMuitiplicityEntity"/>
+      <!-- <property name="connection.username"/> -->
+    <!-- <property name="connection.password"/> -->
+
+    <!-- DB schema will be updated if needed -->
+    <!-- <property name="hbm2ddl.auto">update</property> -->
+  </session-factory>
+</hibernate-configuration>

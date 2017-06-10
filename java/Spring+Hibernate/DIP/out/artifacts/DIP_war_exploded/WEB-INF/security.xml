@@ -1,0 +1,37 @@
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+http://www.springframework.org/schema/security
+http://www.springframework.org/schema/security/spring-security-3.2.xsd">
+
+	<http access-denied-page="/error403.jsp">
+		<intercept-url pattern="/userarea" access="ROLE_ADMIN,ROLE_USER" />
+		<intercept-url pattern="/classifier" access="ROLE_ADMIN,ROLE_ADMIN,ROLE_ANONYMOUS" />
+		<form-login login-page="/login.jsp" default-target-url="/index"
+			authentication-failure-url="/login.jsp?error=true" />
+		<logout logout-url="/logout" logout-success-url="/index.jsp" />
+
+		<anonymous username="guest" granted-authority="ROLE_ANONYMOUS" />
+
+	</http>
+	<authentication-manager alias="authenticationManager">
+		<authentication-provider>
+			<jdbc-user-service data-source-ref="dataSource"
+
+							   users-by-username-query="
+         SELECT USERNAME, PASSWORD, CASE ENABLED WHEN TRUE THEN 'true' ELSE 'false' END
+         FROM USERS
+         WHERE USERNAME=?;"
+
+							   authorities-by-username-query="
+        SELECT USERNAME, ROLENAME
+        FROM USERS
+        WHERE USERNAME=?;"
+
+					/>
+		</authentication-provider>
+	</authentication-manager>
+
+
+</beans:beans>

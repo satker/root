@@ -1,0 +1,23 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="DIP:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/DIP_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="DIP/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="DIP" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Hibernate 4.2.2-4.2.2" />
+          <element id="library" level="project" name="Spring-4.3.6.RELEASE" />
+          <element id="library" level="project" name="Spring MVC-4.3.6.RELEASE" />
+          <element id="library" level="project" name="Spring Security-3.2.5" />
+          <element id="library" level="project" name="org.springframework:spring-jdbc:4.3.4.RELEASE" />
+          <element id="library" level="project" name="org.postgresql:postgresql:9.3-1100-jdbc41" />
+          <element id="library" level="project" name="commons-logging:commons-logging-api:1.1" />
+          <element id="library" level="project" name="javax.validation:validation-api:2.0.0.Beta1" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

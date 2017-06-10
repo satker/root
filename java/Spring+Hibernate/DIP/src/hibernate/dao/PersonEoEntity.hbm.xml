@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="javasrc.hiber.PersonEoEntity" table="person_eo">
+        <id name="id">
+            <column name="id" sql-type="integer"/>
+        </id>
+        <property name="idPerson">
+            <column name="id_person" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="idEo">
+            <column name="id_eo" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="idPos">
+            <column name="id_pos" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="idSubdivision">
+            <column name="id_subdivision" sql-type="integer" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

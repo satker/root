@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="javasrc.hiber.ClassifierEntity" table="classifier">
+        <id name="id">
+            <column name="id" sql-type="integer"/>
+        </id>
+        <property name="idParent">
+            <column name="id_parent" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="name">
+            <column name="name" sql-type="text"/>
+        </property>
+        <property name="designation">
+            <column name="designation" sql-type="text" not-null="true"/>
+        </property>
+        <set name="charactClassesById" inverse="true">
+            <key>
+                <column name="id_classifier" not-null="true"/>
+            </key>
+            <one-to-many not-found="ignore" class="javasrc.hiber.CharactClassEntity"/>
+        </set>
+        <set name="classifiersById" inverse="true">
+            <key>
+                <column name="id_parent" not-null="true"/>
+            </key>
+            <one-to-many not-found="ignore" class="javasrc.hiber.ClassifierEntity"/>
+        </set>
+        <set name="educOdjectsById" inverse="true">
+            <key>
+                <column name="id_classifier" not-null="true"/>
+            </key>
+            <one-to-many not-found="ignore" class="javasrc.hiber.EducOdjectEntity"/>
+        </set>
+        <set name="validClassesById" inverse="true">
+            <key>
+                <column name="id_classifier" not-null="true"/>
+            </key>
+            <one-to-many not-found="ignore" class="javasrc.hiber.ValidClassEntity"/>
+        </set>
+        <set name="validClassesById_0" inverse="true">
+            <key>
+                <column name="id_valid_class" not-null="true"/>
+            </key>
+            <one-to-many not-found="ignore" class="javasrc.hiber.ValidClassEntity"/>
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="javasrc.hiber.ValidClassEntity" table="valid_class">
+        <id name="id">
+            <column name="id" sql-type="integer"/>
+        </id>
+        <property name="idClassifier">
+            <column name="id_classifier" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="idValidClass">
+            <column name="id_valid_class" sql-type="integer" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

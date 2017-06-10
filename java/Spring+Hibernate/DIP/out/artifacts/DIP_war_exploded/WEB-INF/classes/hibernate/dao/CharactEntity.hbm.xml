@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="javasrc.hiber.CharactEntity" table="charact">
+        <id name="id">
+            <column name="id" sql-type="integer"/>
+        </id>
+        <property name="name">
+            <column name="name" sql-type="text"/>
+        </property>
+        <property name="designation">
+            <column name="designation" sql-type="text" not-null="true"/>
+        </property>
+        <property name="idTypeCharact">
+            <column name="id_type_charact" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="idMuitiplicity">
+            <column name="id_muitiplicity" sql-type="integer" not-null="true"/>
+        </property>
+        <set name="charactClassesById" inverse="true">
+            <key>
+                <column name="id_charact" not-null="true"/>
+            </key>
+            <one-to-many not-found="ignore" class="javasrc.hiber.CharactClassEntity"/>
+        </set>
+        <set name="charactValuesById" inverse="true">
+            <key>
+                <column name="id_charact" not-null="true"/>
+            </key>
+            <one-to-many not-found="ignore" class="javasrc.hiber.CharactValueEntity"/>
+        </set>
+    </class>
+</hibernate-mapping>

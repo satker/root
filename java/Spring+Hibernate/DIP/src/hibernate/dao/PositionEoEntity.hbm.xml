@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="javasrc.hiber.PositionEoEntity" table="position_eo">
+        <id name="id">
+            <column name="id" sql-type="integer"/>
+        </id>
+        <property name="idEo">
+            <column name="id_eo" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="idInEo">
+            <column name="id_in_eo" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="numPosition">
+            <column name="num_position" sql-type="integer" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

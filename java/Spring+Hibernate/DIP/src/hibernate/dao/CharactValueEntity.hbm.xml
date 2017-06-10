@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="javasrc.hiber.CharactValueEntity" table="charact_value">
+        <id name="id">
+            <column name="id" sql-type="integer"/>
+        </id>
+        <property name="intValue">
+            <column name="int_value" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="dateValue">
+            <column name="date_value" sql-type="date" not-null="true"/>
+        </property>
+        <property name="transferValue">
+            <column name="transfer_value" sql-type="text" not-null="true"/>
+        </property>
+        <property name="strValue">
+            <column name="str_value" sql-type="text" not-null="true"/>
+        </property>
+        <property name="idCharact">
+            <column name="id_charact" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="idEo">
+            <column name="id_eo" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="linkValue">
+            <column name="link_value" sql-type="text" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
