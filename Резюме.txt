@@ -1,0 +1,13 @@
+Знание основ JAVA, Python
+
+Английский pre-intermediate
+
+Фраймворки java Spring + hibernate
+
+Начал изучать Flask (python)
+
+Опыт создания Docker-образов
+
+Знание SQL
+
+Работа с PostgreSQL
