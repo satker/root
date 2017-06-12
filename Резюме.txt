@@ -1,13 +1,18 @@
-Знание основ JAVA, Python
+Р—РЅР°РЅРёРµ РѕСЃРЅРѕРІ JAVA, Python,
+Html
 
-Английский pre-intermediate
+РђРЅРіР»РёР№СЃРєРёР№ pre-intermediate
 
-Фраймворки java Spring + hibernate
+Р¤СЂР°Р№РјРІРѕСЂРєРё JAVA Spring + hibernate
 
-Начал изучать Flask (python)
+РќР°С‡Р°Р» РёР·СѓС‡Р°С‚СЊ Flask (python)
 
-Опыт создания Docker-образов
+РћРїС‹С‚ СЃРѕР·РґР°РЅРёСЏ Docker-РѕР±СЂР°Р·РѕРІ
 
-Знание SQL
+Р—РЅР°РЅРёРµ SQL
 
-Работа с PostgreSQL
+Р Р°Р±РѕС‚Р° СЃ PostgreSQL
+
+РќРµР±РѕР»СЊС€РѕР№ РѕРїС‹С‚ СЃ Haskell
+
+РћСЃРЅРѕРІС‹ РћРћРџ, Р°Р»РіРѕСЂРёС‚РјС‹
