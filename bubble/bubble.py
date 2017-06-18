@@ -5,8 +5,8 @@ class Sort():
             while i < (len(m) - 1):
                 if m[i] > m[i+1]:
                     m[i], m[i+1] = m[i+1], m[i]
-                i = i + 1
-        print(m)
+                i +=  1
+        self.m = m
 
     def control(self, m):
         count = 0
@@ -14,6 +14,5 @@ class Sort():
         while i < (len(m) - 1):
             if m[i] > m[i+1]:
                 count = count+1
-            i = i+1
+            i += 1
         return count
-
